@@ -13,11 +13,12 @@ const ContactCard = (props) => {
         <div><label>Address of the user:</label>{address}</div>
         <div><label>Type of assistance: </label>{msg}</div>
       </div>
-      <i
+      <button
+      type="submit"
         className="trash alternate outline icon"
         style={{ color: "red", marginTop: "7px" }}
         onClick={() => props.clickHander(id)}
-      ></i>
+      >Delete</button>
     </div>
   );
 };

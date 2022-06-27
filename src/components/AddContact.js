@@ -16,7 +16,28 @@ class AddContact extends React.Component {
     this.props.addContactHandler(this.state);
     this.setState({ name: "", email: "",m_no:"",address:"",msg:"" });
   };
+
+
+  
   render() {
+  let alertt =(email) =>{
+    let re = /^[ ]*([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})[ ]*$/i;
+    if(re.test(email))
+    {
+      alert("this is valid email")
+      {
+        alert("you have successfull entered the details")
+      }
+    }
+    else
+    {
+      alert("invalid email address");
+      {
+        alert("the details are not added")
+      }
+    }
+
+  }
     return (
       <div className="ui main">
         <h2>Add user details</h2>
@@ -32,7 +53,14 @@ class AddContact extends React.Component {
             />
           </div>
           <div className="field">
-            
+          <select name="code" id="code">
+            <option value="in">India
+            </option>
+            <option value="US">USA
+            </option>
+            <option value="EN">England
+            </option>
+          </select>
             <input
               type="text"
               name="m_no"
@@ -73,7 +101,7 @@ class AddContact extends React.Component {
               onChange={(e) => this.setState({ msg: e.target.value })}
             />
           </div>
-          <button className="ui button yellow">Send  Message</button>
+          <button type="submit" className="ui button yellow" onClick={alertt} >Send  Message</button>
         </form>
       </div>
       
