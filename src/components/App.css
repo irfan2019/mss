@@ -1,6 +1,9 @@
 .main {
   margin-top: 5em;
 }
+h2{
+  text-align: center;
+}
 
 .center {
   justify-content: center;
@@ -21,3 +24,4 @@ i.icon {
   font-size: 20px;
   cursor: pointer;
 }
+
